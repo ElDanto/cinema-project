@@ -3,6 +3,14 @@
 *::after {
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;   
+}
+a:hover,
+a:visited,
+a:active{
+    color: #fff
+}
 body{
     background-color: #621402;
     font-family: 'Oswald', sans-serif;
@@ -33,14 +41,8 @@ body{
 .menu-item{
     margin-right: 25px;
 }
-.menu-link{
-    text-decoration: none;
-}
-.menu-link:hover,
-.menu-link:visited,
-.menu-link:active{
-    color: #fff
-}
+
+
 .user{
     margin-left: auto;
     display: flex;
@@ -117,7 +119,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top:60px;
+    margin: 60px auto;
     padding: 46px 0 64px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.5) ;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
@@ -181,4 +183,73 @@ body{
 }
 .session-select-cinema{
     min-width: 470px;
+}
+.scheme{
+    background: rgba(36, 36, 36, 0.18);
+    border-radius: 10px;
+}
+.scheme path:not(.light){
+    fill: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+.scheme path:not(.light):hover{
+    fill: rgba(255, 255, 255, 0.5);
+}
+
+.scheme path.booked,
+.scheme path.booked:hover{
+    fill: rgba(255, 255, 255, 0.05);
+    cursor: not-allowed;
+}
+.scheme path.active,
+.scheme path.active:hover{
+    fill: #FE8E05;
+}
+.scheme path.free,
+.scheme path.free:hover{
+    fill: rgba(255, 255, 255, 0.2);
+}
+.legend{
+    display: flex;
+    align-items: center;
+    padding: 22px 0 38px;
+    max-width: 1024px;
+    margin: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.legend-item{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+.legend-item:nth-last-child(){
+    margin-right: 0;
+}
+.legend-text{
+    padding-left: 16px;
+    opacity: 0.5;
+}
+.price{
+    margin: 60px auto 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.price-tag{
+    font-size: 52px;
+    line-height: 61px;
+}
+.price-label{
+    display: block;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 12px;
+}
+.button-pay{
+    background: #FE8E05;
+    border-radius: 5px;
+    padding: 24px 52px;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: bold;
 }
